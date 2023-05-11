@@ -14,6 +14,7 @@ class Node {
   
 };
 
+//iterative func
 void printList(Node* head) 
 {
   Node* current = head;
@@ -21,10 +22,11 @@ void printList(Node* head)
   {
     std::cout << current->val <<std::endl;
     current = current->next;
-  }
-    
+  }   
 }
-int main() {
+
+int main() 
+{
   Node a("A");
   Node b("B");
   Node c("C");
