@@ -15,4 +15,8 @@ class Node {
 }
 int main() {
   std::cout << "Hello World!\n";
+  Node a("A");
+  Node b("B");
+  Node c("C");
+  Node d("D");
 }
