@@ -14,15 +14,13 @@ class Node {
   
 };
 
-//iterative func
+//recursive func
 void printList(Node* head) 
 {
-  Node* current = head;
-  while(current != nullptr)
-  {
-    std::cout << current->val <<std::endl;
-    current = current->next;
-  }   
+  if(head == nullptr)
+    return;
+  std::cout <<head->val <<std::endl;
+  printList(head->next);
 }
 
 int main() 
