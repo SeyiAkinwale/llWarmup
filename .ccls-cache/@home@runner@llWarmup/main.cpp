@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 
 class Node {
   public:
@@ -10,13 +11,27 @@ class Node {
       val = initialVal;
       next = nullptr;
     }
+  
+};
 
+void printList(Node* head) 
+{
+  Node* current = head;
+  while(current != nullptr)
+  {
+    std::cout << current->val <<std::endl;
+    current = current->next;
+  }
     
 }
 int main() {
-  std::cout << "Hello World!\n";
   Node a("A");
   Node b("B");
   Node c("C");
   Node d("D");
+  a.next = &b;
+  b.next = &c;
+  c.next = &d;
+
+  printList(&a);
 }
